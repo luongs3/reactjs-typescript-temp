@@ -38,13 +38,7 @@ function App() {
 
 async function getProfile() {
   try {
-    const { data } = await axios.get('http://localhost:3000/auth/profile', {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        Authorization:
-          'OAuth oauth_consumer_key=MSUPd5D1gZvFPAQi5xyjOfXnq, oauth_token=3539757134-urLTw9f1dsQQtAQCTpGApBQMuNRtp9NefpisNKB',
-      },
-    })
+    const { data } = await axios.get('http://localhost:3000/auth/profile')
     console.log('data', data)
   } catch (ex) {
     console.log('ex', ex)
@@ -53,5 +47,3 @@ async function getProfile() {
 
 export default App
 
-// consumerKey="MSUPd5D1gZvFPAQi5xyjOfXnq"
-// consumerSecret="4aybHApjGLxJxIpXEY4XLM5PzRqrVa4cl7fWAtV22DSYw5AcLw"
